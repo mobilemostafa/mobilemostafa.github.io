@@ -14,7 +14,7 @@
             padding: 0;
         }
         header {
-            background-color: #0056b3;
+            background-color: #9b59b6; /* رنگ بنفش ملایم */
             color: white;
             padding: 30px;
             text-align: center;
@@ -53,22 +53,22 @@
             margin: 10px 0;
         }
         .service-item:nth-child(1) {
-            background-color: #f8d7da; /* رنگ قرمز کمرنگ */
+            background-color: #f39c12; /* رنگ زرد */
         }
         .service-item:nth-child(2) {
-            background-color: #d1ecf1; /* رنگ آبی کمرنگ */
+            background-color: #e74c3c; /* رنگ قرمز */
         }
         .service-item:nth-child(3) {
-            background-color: #d4edda; /* رنگ سبز کمرنگ */
+            background-color: #2ecc71; /* رنگ سبز */
         }
         .service-item:nth-child(4) {
-            background-color: #fff3cd; /* رنگ زرد کمرنگ */
+            background-color: #3498db; /* رنگ آبی */
         }
         .service-item:nth-child(5) {
-            background-color: #e2e3e5; /* رنگ خاکی کمرنگ */
+            background-color: #8e44ad; /* رنگ بنفش */
         }
         .service-item:nth-child(6) {
-            background-color: #cce5ff; /* رنگ آبی روشن */
+            background-color: #1abc9c; /* رنگ فیروزه‌ای */
         }
         .contact-info {
             background-color: #e9ecef;
@@ -145,6 +145,8 @@
         </div>
     </div>
 
-   
+    <footer>
+        <!-- این بخش حذف شده است -->
+    </footer>
 </body>
 </html>
