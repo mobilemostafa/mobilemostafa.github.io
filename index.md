@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
@@ -145,8 +145,6 @@
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 موبایل مصطفی - تمامی حقوق محفوظ است</p>
-    </footer>
+   
 </body>
 </html>
