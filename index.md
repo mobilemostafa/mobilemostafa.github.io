@@ -1,4 +1,4 @@
-https://github.com/2dust/v2rayNG/releases/download/1.9.22/v2rayNG_1.9.22_universal.apk
+
 
  **1 _  Hiddify →**  [Android](https://github.com/hiddify/hiddify-next/releases/latest/download/hiddify-android-universal.apk)+[1.1.](https://github.com/hiddify/hiddify-next/releases/download/v1.1.1/Hiddify-Android-universal.apk)
  🟠 [windows](https://github.com/hiddify/hiddify-next/releases/latest/download/hiddify-windows-x64-setup.zip) 🟠 [*IOS*](https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532) 
