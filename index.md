@@ -1,152 +1,114 @@
-
+<!DOCTYPE html>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>موبایل مصطفی</title>
     <style>
         body {
-            font-family: Tahoma, Arial, sans-serif;
+            font-family: 'Vazir', 'Tahoma', sans-serif;
             direction: rtl;
             text-align: center;
-            background-color: #f9f9f9;
+            background: linear-gradient(135deg, #fafafa, #e6e6e6); /* پس‌زمینه روشن‌تر برای کنتراست بالاتر */
+            color: #000000; /* متن به رنگ سیاه کامل */
             margin: 0;
             padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
-        header {
-            background-color: #9b59b6; /* رنگ بنفش ملایم */
-            color: white;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+        .content-box {
+            background: rgba(255, 255, 255, 0.98); /* پس‌زمینه باکس روشن‌تر برای کنتراست بالاتر */
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            animation: fadeIn 1s ease-in-out;
+            width: 80%;
+            max-width: 600px;
         }
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        header p {
-            font-size: 1.2em;
+        
+        h1 {
+            font-size: 3em;
+            color: #000080; /* آبی تیره برای عنوان */
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
-        .content {
-            padding: 40px 20px;
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 0 auto;
-            max-width: 900px;
+
+        li {
+            font-size: 1.4em;
+            margin: 15px 0;
+            line-height: 1.6;
+            position: relative;
+            padding-right: 30px;
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-in-out forwards;
+            animation-delay: calc(0.1s * var(--index));
         }
-        .service-item {
-            border: 1px solid #e1e1e1;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .service-item:hover {
-            transform: translateY(-10px);
+
+        li::before {
+            content: '✔';
+            position: absolute;
+            right: 0;
+            color: #006400; /* سبز تیره برای تیک */
+            font-weight: bold;
         }
-        .service-item p {
-            font-size: 1.1em;
-            margin: 10px 0;
-        }
-        .service-item:nth-child(1) {
-            background-color: #f39c12; /* رنگ زرد */
-        }
-        .service-item:nth-child(2) {
-            background-color: #e74c3c; /* رنگ قرمز */
-        }
-        .service-item:nth-child(3) {
-            background-color: #2ecc71; /* رنگ سبز */
-        }
-        .service-item:nth-child(4) {
-            background-color: #3498db; /* رنگ آبی */
-        }
-        .service-item:nth-child(5) {
-            background-color: #8e44ad; /* رنگ بنفش */
-        }
-        .service-item:nth-child(6) {
-            background-color: #1abc9c; /* رنگ فیروزه‌ای */
-        }
-        .contact-info {
-            background-color: #e9ecef;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 40px 0;
-            font-size: 18px;
-        }
-        .contact-info h3 {
-            margin-bottom: 10px;
-        }
-        .contact-btn {
-            display: inline-block;
-            padding: 10px 30px;
-            background-color: #007bff;
-            color: white;
-            font-size: 1.2em;
-            border-radius: 5px;
+        
+        a {
+            color: #8B0000; /* قرمز تیره برای لینک */
             text-decoration: none;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
-        .contact-btn:hover {
-            background-color: #0056b3;
+        
+        a:hover {
+            color: #800000; /* قرمز تیره‌تر هنگام هاور */
+            text-decoration: underline;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 15px;
-            text-align: center;
+
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
-    <header>
+    <div class="content-box">
         <h1>موبایل مصطفی</h1>
-        <p>کلیه خدمات تلفن همراه با کیفیت بالا</p>
-    </header>
-
-    <div class="content">
-        <h2>خدمات ما</h2>
-        <div class="services">
-            <div class="service-item">
-                <h3>فروش انواع تلفن همراه</h3>
-                <p>با بهترین قیمت و کیفیت</p>
-            </div>
-            <div class="service-item">
-                <h3>تعمیرات تلفن همراه</h3>
-                <p>تعمیرات سخت‌افزاری و نرم‌افزاری</p>
-            </div>
-            <div class="service-item">
-                <h3>لوازم جانبی</h3>
-                <p>فروش لوازم جانبی اصل و با کیفیت</p>
-            </div>
-            <div class="service-item">
-                <h3>فروش اپل آیدی</h3>
-                <p>ساخت و فروش اپل آیدی امن</p>
-            </div>
-            <div class="service-item">
-                <h3>خرید و فروش خط 912</h3>
-                <p>خرید و فروش شماره‌های خاص</p>
-            </div>
-            <div class="service-item">
-                <h3>نمایندگی ایرانسل و رایتل</h3>
-                <p>خدمات مربوط به سیم‌کارت‌ها</p>
-            </div>
-        </div>
-
+        <ul>
+            <li style="--index:1;">کلیه خدمات تلفن همراه</li>
+            <li style="--index:2;">تعمیرات تخصصی نرم‌افزار و سخت‌افزار</li>
+            <li style="--index:3;">نمایندگی ایرانسل و رایتل</li>
+            <li style="--index:4;">فروش اپل آیدی</li>
+            <li style="--index:5;">لوازم جانبی</li>
+        </ul>
         <div class="contact-info">
-            <h3>تماس با ما</h3>
-            <p>برای اطلاعات بیشتر یا درخواست خدمات، با ما تماس بگیرید:</p>
-            <p>شماره تماس: 09354811944</p>
-            <a href="tel:09354811944" class="contact-btn">تماس با ما</a>
+            <p>تماس با ما: <a href="tel:09354811944">09354811944</a></p>
         </div>
     </div>
-
-    <footer>
-        <!-- این بخش حذف شده است -->
-    </footer>
 </body>
 </html>
