@@ -8,7 +8,8 @@
         body {
             font-family: 'Tahoma', sans-serif;
             direction: rtl;
-            text-align: right;
+            text-align: center; /* Center-align text */
+            background-color: #ADD8E6; /* Light blue background */
         }
         h1 {
             color: #00008B;
