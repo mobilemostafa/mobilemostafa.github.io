@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موبایل مصطفی</title>
     <style>
         body {
             font-family: 'Vazir', 'Tahoma', sans-serif;
             direction: rtl;
             text-align: center;
-            background: linear-gradient(135deg, #fafafa, #e6e6e6); /* پس‌زمینه روشن‌تر برای کنتراست بالاتر */
-            color: #000000; /* متن به رنگ سیاه کامل */
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            color: #212529;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -21,7 +21,7 @@
         }
         
         .content-box {
-            background: rgba(255, 255, 255, 0.98); /* پس‌زمینه باکس روشن‌تر برای کنتراست بالاتر */
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -37,7 +37,7 @@
         
         h1 {
             font-size: 3em;
-            color: #000080; /* آبی تیره برای عنوان */
+            color: #0056b3;
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
@@ -52,40 +52,26 @@
             margin: 15px 0;
             line-height: 1.6;
             position: relative;
-            padding-right: 30px;
-            opacity: 0;
-            animation: fadeInUp 0.5s ease-in-out forwards;
-            animation-delay: calc(0.1s * var(--index));
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            padding-right: 30px; /* فضا برای آیکون */
         }
 
         li::before {
             content: '✔';
             position: absolute;
             right: 0;
-            color: #006400; /* سبز تیره برای تیک */
+            color: #28a745; /* رنگ سبز برای تیک */
             font-weight: bold;
         }
         
         a {
-            color: #8B0000; /* قرمز تیره برای لینک */
+            color: #d9534f;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
         }
         
         a:hover {
-            color: #800000; /* قرمز تیره‌تر هنگام هاور */
+            color: #c9302c;
             text-decoration: underline;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
@@ -100,11 +86,11 @@
     <div class="content-box">
         <h1>موبایل مصطفی</h1>
         <ul>
-            <li style="--index:1;">کلیه خدمات تلفن همراه</li>
-            <li style="--index:2;">تعمیرات تخصصی نرم‌افزار و سخت‌افزار</li>
-            <li style="--index:3;">نمایندگی ایرانسل و رایتل</li>
-            <li style="--index:4;">فروش اپل آیدی</li>
-            <li style="--index:5;">لوازم جانبی</li>
+            <li>کلیه خدمات تلفن همراه</li>
+            <li>تعمیرات تخصصی نرم‌افزار و سخت‌افزار</li>
+            <li>نمایندگی ایرانسل و رایتل</li>
+            <li>فروش اپل آیدی</li>
+            <li>لوازم جانبی</li>
         </ul>
         <div class="contact-info">
             <p>تماس با ما: <a href="tel:09354811944">09354811944</a></p>
